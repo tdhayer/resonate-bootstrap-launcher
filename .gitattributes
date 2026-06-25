@@ -1,0 +1,4 @@
+# Shell scripts must stay LF — they are fetched and executed on Linux
+# (Proxmox) hosts via `bash -c "$(curl ...)"`, where CRLF endings break
+# execution with errors like `$'\r': command not found`.
+*.sh text eol=lf
